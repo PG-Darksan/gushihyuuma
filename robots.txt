@@ -24,4 +24,4 @@ Allow: /
 # User-agent: CCBot
 # Disallow: /
 
-Sitemap: https://gushi-hyuma.pages.dev/sitemap.xml
+Sitemap: https://jinken-gushi.com/sitemap.xml
