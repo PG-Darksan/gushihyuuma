@@ -1,10 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://gushi-hyuma.pages.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://gushi-hyuma.pages.dev/profile.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://gushi-hyuma.pages.dev/gallery.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://gushi-hyuma.pages.dev/achievements.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://gushi-hyuma.pages.dev/reviews.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gushi-hyuma.pages.dev/press.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://gushi-hyuma.pages.dev/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://gushi-hyuma.pages.dev/images/home/プロフィール.jpg</image:loc>
+      <image:title>人権講演家 具志アンデルソン飛雄馬</image:title>
+      <image:caption>外国人・社会参画・多文化共生をテーマに講演活動する人権講演家</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/profile.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>具志アンデルソン飛雄馬 人権講演会</video:title>
+      <video:description>人権講演家 具志アンデルソン飛雄馬による、人権・外国人・社会参画・多文化共生をテーマにした講演会動画。</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/bnCA7wSTEtQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/video.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>人権講演家 具志アンデルソン飛雄馬 サンプル動画</video:title>
+      <video:description>人権・外国人・社会参画・多文化共生をテーマにした講演会のサンプル動画。</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/bnCA7wSTEtQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/achievements.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/contact.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/reviews.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/gallery.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://gushi-hyuma.pages.dev/press.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
