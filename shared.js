@@ -95,21 +95,24 @@ function toggleExp(id, btn) {
 })();
 
 /* ============================================================
-   訪問者カウンター（index.html の #visit-count 要素にのみ表示）
-   - CounterAPI v1（無料・登録不要）を使用
-   - sessionStorage で同一セッションの重複カウントを防ぐ
+   訪問者カウンター（表示は index.html の #visit-count 要素のみ）
+   - 自前の Cloudflare Worker（_worker/counter.js）で数える
+     ※ 以前の CounterAPI v1 は廃止（410 Gone）されたため移行
+   - どのページから来ても 1 セッション 1 カウント（sessionStorage で重複を防ぐ）
    - 同じブラウザで再訪しても、ブラウザを閉じるまでは1カウント
    ------------------------------------------------------------
-   カウンター値を変更したい場合は CounterAPI の以下URLにアクセス:
-   https://api.counterapi.dev/v1/gushi-hyuma/site-visits/
+   カウンター値に下駄を履かせたい場合は _worker/wrangler.toml の
+   VISITS_BASE を変えて deploy する
    ============================================================ */
 (function() {
   const elNum = document.getElementById('visit-count');
-  if (!elNum) return;
-
-  const NAMESPACE = 'gushi-hyuma';      // 識別用のネームスペース
-  const KEY       = 'site-visits';      // カウンター名
+  const API = 'https://gushi-visits.hisator-notebook.com/visits';
   const SESSION_FLAG = 'gh_visit_counted';
+
+  let counted = false;
+  try { counted = !!sessionStorage.getItem(SESSION_FLAG); } catch (e) {}
+  // 表示の無いページで、もう数え済みなら何もしない
+  if (!elNum && counted) return;
 
   function fmt(n) { return Number(n).toLocaleString('ja-JP'); }
 
@@ -128,18 +131,15 @@ function toggleExp(id, btn) {
 
   async function run() {
     try {
-      const counted = sessionStorage.getItem(SESSION_FLAG);
-      // 初回訪問なら +1、再アクセス時は GET のみ
-      const action = counted ? '' : 'up';
-      const url = `https://api.counterapi.dev/v1/${NAMESPACE}/${KEY}/${action}`;
-      const res = await fetch(url, { cache: 'no-store' });
+      // 初回訪問なら POST で +1、再アクセス時は GET のみ
+      const res = await fetch(API, { method: counted ? 'GET' : 'POST', cache: 'no-store' });
       if (!res.ok) throw new Error('counter unavailable');
       const data = await res.json();
-      if (!counted) sessionStorage.setItem(SESSION_FLAG, '1');
-      const n = data.count ?? data.value ?? 0;
-      animate(elNum, n);
+      if (!counted) { try { sessionStorage.setItem(SESSION_FLAG, '1'); } catch (e) {} }
+      if (elNum) animate(elNum, data.count ?? 0);
     } catch (e) {
       // API 失敗時はフォールバック表示
+      if (!elNum) return;
       elNum.textContent = '—';
       elNum.style.fontSize = '1.5rem';
       elNum.title = 'カウンター取得エラー';

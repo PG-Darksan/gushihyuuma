@@ -1,0 +1,28 @@
+# 訪問者カウンター Worker (jinken-gushi.com のトップページの「訪問者数」)
+#
+# デプロイ:
+#   cd _worker
+#   npx wrangler deploy
+#
+# このフォルダーは先頭が _ なので GitHub Pages (Jekyll) では公開されない。
+# HisatorNotebook の課金 Worker (hisator-billing) とは別物。 KV も別。
+
+name = "gushi-visits"
+main = "counter.js"
+account_id = "f273395cbd590da9ad1e36e4b6180d70"
+compatibility_date = "2026-08-01"
+
+# workers.dev には出さず、 カスタムドメインだけで配信する
+workers_dev = false
+
+[[routes]]
+pattern = "gushi-visits.hisator-notebook.com"
+custom_domain = true
+
+[[kv_namespaces]]
+binding = "GUSHI_VISITS"
+id = "0297e39be3084013a4319de2391de986"
+
+[vars]
+# 表示に足す下駄 (旧カウンターの実績を引き継ぎたい時だけ数値を入れる)
+VISITS_BASE = "0"
