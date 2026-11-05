@@ -213,3 +213,22 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.5);padding:48px 32px}
   .j-item::before{left:13px}
   .j-item .j-icon{left:10px}
 }
+
+/* 広告枠 (PR) — HisatorNotebook。 サイト本文と見分けが付くよう紺地に金 */
+.pr-ad{max-width:880px;margin:0 auto 64px;padding:0 32px}
+.pr-ad-card{position:relative;display:flex;align-items:center;gap:28px;padding:30px 36px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#1E3A5C,#14273F);color:#F4EBDD;text-decoration:none;box-shadow:0 12px 40px rgba(20,39,63,.22);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.pr-ad-card:hover{transform:translateY(-3px);box-shadow:0 18px 56px rgba(20,39,63,.3)}
+.pr-ad-label{position:absolute;top:12px;right:16px;font-size:.66rem;letter-spacing:.15em;font-weight:600;color:rgba(244,235,221,.75);border:1px solid rgba(244,235,221,.4);border-radius:4px;padding:2px 7px}
+.pr-ad-icon{width:96px;height:96px;flex-shrink:0;border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.pr-ad-body{flex:1;min-width:0}
+.pr-ad-name{font-family:var(--serif);font-size:.82rem;letter-spacing:.16em;color:#D9B77E;margin-bottom:6px}
+.pr-ad-title{font-size:1.3rem;font-weight:700;color:#fff;line-height:1.45;margin-bottom:8px}
+.pr-ad-desc{font-size:.88rem;line-height:1.75;color:rgba(244,235,221,.85)}
+.pr-ad-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:9px 22px;border-radius:50px;background:#D9B77E;color:#14273F;font-size:.82rem;font-weight:700;letter-spacing:.03em;transition:background .3s var(--ease)}
+.pr-ad-card:hover .pr-ad-cta{background:#E8CB98}
+.pr-ad-title,.pr-ad-desc{word-break:auto-phrase}
+@media(max-width:700px){
+  .pr-ad{padding:0 16px}
+  .pr-ad-card{flex-direction:column;text-align:center;gap:16px;padding:40px 22px 28px}
+  .pr-ad-title{font-size:1.12rem}
+}
