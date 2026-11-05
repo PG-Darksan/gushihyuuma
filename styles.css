@@ -215,7 +215,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.5);padding:48px 32px}
 }
 
 /* 広告枠 (PR) — HisatorNotebook。 サイト本文と見分けが付くよう紺地に金 */
-.pr-ad{max-width:880px;margin:0 auto 64px;padding:0 32px}
+.pr-ad{max-width:880px;margin:48px auto 64px;padding:0 32px}
 .pr-ad-card{position:relative;display:flex;align-items:center;gap:28px;padding:30px 36px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#1E3A5C,#14273F);color:#F4EBDD;text-decoration:none;box-shadow:0 12px 40px rgba(20,39,63,.22);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .pr-ad-card:hover{transform:translateY(-3px);box-shadow:0 18px 56px rgba(20,39,63,.3)}
 .pr-ad-label{position:absolute;top:12px;right:16px;font-size:.66rem;letter-spacing:.15em;font-weight:600;color:rgba(244,235,221,.75);border:1px solid rgba(244,235,221,.4);border-radius:4px;padding:2px 7px}
