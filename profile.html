@@ -17,20 +17,22 @@
 <meta property="og:url" content="https://jinken-gushi.com/profile.html">
 <meta property="og:site_name" content="具志アンデルソン飛雄馬 公式サイト">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jinken-gushi.com/images/home/プロフィール.jpg">
+<meta property="og:image" content="https://jinken-gushi.com/images/home/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg">
 <meta property="og:image:alt" content="人権講演家 具志アンデルソン飛雄馬">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="588">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="プロフィール｜人権講演家 具志アンデルソン飛雄馬">
 <meta name="twitter:description" content="人権講演家 具志アンデルソン飛雄馬のプロフィール。外国人としていじめ・差別を乗り越え、人権・社会参画・多文化共生をテーマに講演活動">
-<meta name="twitter:image" content="https://jinken-gushi.com/images/home/プロフィール.jpg">
+<meta name="twitter:image" content="https://jinken-gushi.com/images/home/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2026110502">
-<link rel="icon" type="image/jpeg" href="images/gallery/7.jpg">
-<link rel="shortcut icon" type="image/jpeg" href="images/gallery/7.jpg">
-<link rel="apple-touch-icon" href="images/gallery/7.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2026112501">
+<noscript><style>#loader{display:none!important}.reveal,.hero-left,.hero-right{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
   "@graph":[
@@ -62,9 +64,8 @@
       "name":"具志アンデルソン飛雄馬 人権講演会 完全版",
       "description":"人権講演家 具志アンデルソン飛雄馬の人権講演。外国人として日本で生きてきた経験から、人権・外国人差別・社会参画・多文化共生について語る",
       "thumbnailUrl":"https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg",
-      "uploadDate":"2022-01-01",
+      "uploadDate":"2022-01-01T00:00:00+09:00",
       "embedUrl":"https://www.youtube.com/embed/bnCA7wSTEtQ",
-      "contentUrl":"https://www.youtube.com/watch?v=bnCA7wSTEtQ",
       "publisher":{
         "@type":"Person",
         "name":"具志アンデルソン飛雄馬"
@@ -165,6 +166,7 @@
   pointer-events:none;
   z-index:1;
 }
+.yt-lite.yt-loaded::after{display:none}
 .yt-play-btn{
   position:absolute;
   top:50%;
@@ -292,7 +294,7 @@
     <a href="press.html">新聞記事</a>
     <a href="contact.html" class="nav-cta">お問い合わせ</a>
   </nav>
-  <div class="burger" id="burger" onclick="toggleMob()"><i></i><i></i><i></i></div>
+  <button type="button" class="burger" id="burger" onclick="toggleMob()" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobNav"><i></i><i></i><i></i></button>
 </div>
 </header>
 <div class="mob-overlay" id="mobOv" onclick="closeMob()"></div>
@@ -311,32 +313,11 @@
 
 <!--
   ============================================================
-  動画の再生開始時間 一覧（仮設定）— 後から調整可能
+  動画の再生開始時間 一覧 — data-start（秒）で調整可能
   ============================================================
   YouTube動画ID: bnCA7wSTEtQ（具志アンデルソン飛雄馬講演会完全版）
-
-  各 <iframe> の src の末尾「start=数字」を変更すると
-  指定した秒数から再生されます。
-
-  時間→秒 変換例:
-    0:30  → start=30
-    1:00  → start=60
-    1:30  → start=90
-    2:00  → start=120
-    3:00  → start=180
-    5:00  → start=300
-    10:00 → start=600
-    15:00 → start=900
-    20:00 → start=1200
-
-  現在の仮設定:
-    1990年代 → start=60     (1:00)
-    1995年代 → start=300    (5:00)
-    2000年代 → start=600    (10:00)
-    2005年代 → start=900    (15:00)
-    2010年代 → start=1200   (20:00)
-    2015年代 → start=1500   (25:00)
-    2020年代 → start=1800   (30:00)
+  時代ごとの独自サムネイル画像を用意した場合は、各 <img> の src を
+  差し替えてください（現在は YouTube 公式サムネイルを直接参照）。
   ============================================================
 -->
 
@@ -348,7 +329,7 @@
 
 <article class="j-item reveal"><div class="j-icon" aria-hidden="true">🏫</div><h3 class="j-year">1990</h3><div class="j-text">入管法が改正直後に、父から「日本はとても良い国なので家族みんなでおいで！」と言われ、母・兄二人・妹と一緒に来日。来日後、しばらく工場でアルバイトしていたが、教育委員会に直談し、８ヵ月後、小学校に入学。入学後、いじめを受けるようになる。</div></article>
 
-<!-- ▼ 1990年代 動画（仮: 1:00〜） -->
+<!-- ▼ 1990年代 動画（0:13〜） -->
 <div class="j-video reveal">
   <div class="j-video-card">
     <div class="j-video-head">
@@ -356,7 +337,7 @@
       <span class="j-video-title">1990年代 — 来日と葛藤の日々</span>
     </div>
     <div class="j-video-frame yt-lite" data-id="bnCA7wSTEtQ" data-start="13" role="button" tabindex="0" aria-label="講演動画を再生（0:13〜）">
-      <img class="yt-thumb" src="images/profile/era_1990.jpg" alt="1990年代 — 来日と葛藤の日々（講演動画サムネイル）" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg'">
+      <img class="yt-thumb" src="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg" alt="1990年代 — 来日と葛藤の日々（講演動画サムネイル）" width="1280" height="720" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/hqdefault.jpg'">
       <div class="yt-play-btn" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
       <div class="yt-lite-time">0:13〜</div>
     </div>
@@ -367,7 +348,7 @@
 
 <article class="j-item reveal"><div class="j-icon" aria-hidden="true">🌑</div><h3 class="j-year">1996</h3><div class="j-text">定時制高校に入学。高校でも差別がどんどん拡大し、暴行事件を起こし退学。非行に走った。</div></article>
 
-<!-- ▼ 1995年代 動画（仮: 5:00〜） -->
+<!-- ▼ 1995年代 動画（13:45〜） -->
 <div class="j-video reveal">
   <div class="j-video-card">
     <div class="j-video-head">
@@ -375,7 +356,7 @@
       <span class="j-video-title">1995年代 — 非行と模索の時代</span>
     </div>
     <div class="j-video-frame yt-lite" data-id="bnCA7wSTEtQ" data-start="825" role="button" tabindex="0" aria-label="講演動画を再生（13:45〜）">
-      <img class="yt-thumb" src="images/profile/era_1995.jpg" alt="1995年代 — 非行と模索の時代（講演動画サムネイル）" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg'">
+      <img class="yt-thumb" src="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg" alt="1995年代 — 非行と模索の時代（講演動画サムネイル）" width="1280" height="720" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/hqdefault.jpg'">
       <div class="yt-play-btn" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
       <div class="yt-lite-time">13:45〜</div>
     </div>
@@ -388,7 +369,7 @@
 
 <article class="j-item reveal"><div class="j-icon" aria-hidden="true">🤝</div><h3 class="j-year">2000</h3><div class="j-text">一人の社長と出会い、営業の世界に入る。しかし「外人さん？うち、要りません」と壁に直面。</div></article>
 
-<!-- ▼ 2000年代 動画（仮: 10:00〜） -->
+<!-- ▼ 2000年代 動画（23:35〜） -->
 <div class="j-video reveal">
   <div class="j-video-card">
     <div class="j-video-head">
@@ -396,7 +377,7 @@
       <span class="j-video-title">2000年代 — 社会との出会い</span>
     </div>
     <div class="j-video-frame yt-lite" data-id="bnCA7wSTEtQ" data-start="1415" role="button" tabindex="0" aria-label="講演動画を再生（23:35〜）">
-      <img class="yt-thumb" src="images/profile/era_2000.jpg" alt="2000年代 — 社会との出会い（講演動画サムネイル）" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg'">
+      <img class="yt-thumb" src="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg" alt="2000年代 — 社会との出会い（講演動画サムネイル）" width="1280" height="720" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/hqdefault.jpg'">
       <div class="yt-play-btn" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
       <div class="yt-lite-time">23:35〜</div>
     </div>
@@ -413,7 +394,7 @@
 
 <article class="j-item reveal"><div class="j-icon" aria-hidden="true">⚖️</div><h3 class="j-year">2005</h3><div class="j-text">警察・薬局での差別事件に対し活動。県議会で請願採択。</div></article>
 
-<!-- ▼ 2005年代 動画（仮: 15:00〜） -->
+<!-- ▼ 2005年代 動画（40:17〜） -->
 <div class="j-video reveal">
   <div class="j-video-card">
     <div class="j-video-head">
@@ -421,7 +402,7 @@
       <span class="j-video-title">2005年代 — 講演活動の本格スタート</span>
     </div>
     <div class="j-video-frame yt-lite" data-id="bnCA7wSTEtQ" data-start="2417" role="button" tabindex="0" aria-label="講演動画を再生（40:17〜）">
-      <img class="yt-thumb" src="images/profile/era_2005.jpg" alt="2005年代 — 講演活動の本格スタート（講演動画サムネイル）" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg'">
+      <img class="yt-thumb" src="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg" alt="2005年代 — 講演活動の本格スタート（講演動画サムネイル）" width="1280" height="720" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/bnCA7wSTEtQ/hqdefault.jpg'">
       <div class="yt-play-btn" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
       <div class="yt-lite-time">40:17〜</div>
     </div>
@@ -455,7 +436,7 @@
 </div>
 
 <a href="https://www.youtube.com/@GushiHyuma" target="_blank" rel="noopener" class="video-box reveal" aria-label="YouTube チャンネルを開く">
-  <img src="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg" alt="具志アンデルソン飛雄馬 講演会" loading="lazy">
+  <img src="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg" alt="具志アンデルソン飛雄馬 講演会" width="1280" height="720" loading="lazy" decoding="async">
   <div class="vb-overlay">
     <div class="play-btn"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
     <p>もっと見る — YouTube チャンネル</p>
@@ -470,7 +451,7 @@
 <aside class="pr-ad reveal" aria-label="広告">
   <a href="https://hisator-notebook.com/" class="pr-ad-card" target="_blank" rel="sponsored noopener">
     <span class="pr-ad-label">広告</span>
-    <img src="images/ad/hisatornotebook.webp" alt="HisatorNotebook のアイコン" class="pr-ad-icon" width="96" height="96" loading="lazy">
+    <img src="images/ad/hisatornotebook.webp" alt="HisatorNotebook のアイコン" class="pr-ad-icon" width="96" height="96" loading="lazy" decoding="async">
     <div class="pr-ad-body">
       <div class="pr-ad-name">HisatorNotebook</div>
       <div class="pr-ad-title">マップもノートも動画も、1 つのアプリで</div>
@@ -499,6 +480,6 @@
 </div>
 <div class="ft-copy">&copy; 具志アンデルソン飛雄馬 公式サイト ｜ Anderson Hyuma Gushi Official Web Site</div>
 </footer>
-<script src="shared.js"></script>
+<script src="shared.js?v=2026112501" defer></script>
 </body>
 </html>

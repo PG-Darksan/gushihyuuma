@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>講演会動画｜人権講演家 具志アンデルソン飛雄馬｜サンプル映像と講師依頼</title>
 <meta name="description" content="人権講演家 具志アンデルソン飛雄馬の講演会サンプル動画。人権・外国人・社会参画・多文化共生をテーマにした講演の様子を映像でご覧いただけます。学校・企業・行政の人権講師依頼もこちらから。">
 <meta name="keywords" content="人権講演家,人権講演,動画,サンプル映像,外国人,社会参画,多文化共生,人権教育,講師依頼,具志アンデルソン飛雄馬,YouTube,人権研修">
@@ -25,11 +26,14 @@
 <meta name="twitter:description" content="人権・外国人・社会参画・多文化共生をテーマにした講演会サンプル映像。">
 <meta name="twitter:image" content="https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2026110502">
-<link rel="icon" type="image/jpeg" href="images/gallery/7.jpg">
-<link rel="shortcut icon" type="image/jpeg" href="images/gallery/7.jpg">
-<link rel="apple-touch-icon" href="images/gallery/7.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.youtube.com">
+<link rel="preconnect" href="https://i.ytimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2026112501">
+<noscript><style>#loader{display:none!important}.reveal,.hero-left,.hero-right{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
   "@graph":[
@@ -45,9 +49,8 @@
       "name":"具志アンデルソン飛雄馬 人権講演会 サンプル動画",
       "description":"人権講演家 具志アンデルソン飛雄馬による、人権・外国人・社会参画・多文化共生をテーマにした講演会のサンプル動画。",
       "thumbnailUrl":"https://i.ytimg.com/vi/bnCA7wSTEtQ/maxresdefault.jpg",
-      "uploadDate":"2022-01-01",
+      "uploadDate":"2022-01-01T00:00:00+09:00",
       "embedUrl":"https://www.youtube.com/embed/bnCA7wSTEtQ",
-      "contentUrl":"https://www.youtube.com/watch?v=bnCA7wSTEtQ",
       "publisher":{"@type":"Person","name":"具志アンデルソン飛雄馬"}
     }
   ]
@@ -68,21 +71,19 @@
   <nav>
     <a href="index.html">ホーム</a>
     <a href="profile.html">プロフィール</a>
-    <a href="video.html">動画</a>
     <a href="gallery.html">講演会の様子</a>
     <a href="achievements.html">講演実績</a>
     <a href="reviews.html">感想</a>
     <a href="press.html">新聞記事</a>
     <a href="contact.html" class="nav-cta">お問い合わせ</a>
   </nav>
-  <div class="burger" id="burger" onclick="toggleMob()"><i></i><i></i><i></i></div>
+  <button type="button" class="burger" id="burger" onclick="toggleMob()" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobNav"><i></i><i></i><i></i></button>
 </div>
 </header>
 <div class="mob-overlay" id="mobOv" onclick="closeMob()"></div>
 <div class="mob-nav" id="mobNav">
   <a href="index.html">ホーム</a>
   <a href="profile.html">プロフィール</a>
-  <a href="video.html">サンプル動画</a>
   <a href="gallery.html">講演会の様子</a>
   <a href="achievements.html">講演実績</a>
   <a href="reviews.html">感想</a>
@@ -114,10 +115,10 @@
       ?start=60&end=180  → 1:00〜3:00 まで再生
 
     ※ profile.html にも同じ書き方の iframe が複数あります
-       （6箇所）。各時代ごとに start= の数字を調整してください。
+       （4箇所）。各時代ごとに start= の数字を調整してください。
     ============================================================
   -->
-  <div class="reveal" style="max-width:960px;margin:0 auto 60px;border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.18);background:#000">
+  <div class="reveal" style="max-width:960px;margin:0 auto 48px;border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.18);background:#000">
     <div style="position:relative;width:100%;aspect-ratio:16/9">
       <iframe
         src="https://www.youtube.com/embed/bnCA7wSTEtQ?start=0&rel=0&playsinline=1"
@@ -129,9 +130,9 @@
     </div>
   </div>
 
-  <a href="https://www.youtube.com/@GushiHyuma" target="_blank" rel="noopener" class="video-box reveal" aria-label="YouTube チャンネルを開く" style="display:block;max-width:760px;margin:0 auto 60px;border-radius:18px;overflow:hidden;text-align:center;background:linear-gradient(135deg,#c2693a,#a04e26);padding:40px 24px;color:#fff;text-decoration:none;box-shadow:0 12px 32px rgba(0,0,0,0.18)">
-    <div class="play-btn" style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
-    <p style="margin:0;font-size:1.1rem;font-weight:600">YouTube チャンネルで他の動画も見る</p>
+  <a href="https://www.youtube.com/@GushiHyuma" target="_blank" rel="noopener" class="video-cta reveal" aria-label="YouTube チャンネルを開く">
+    <div class="play-btn" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></div>
+    <p>YouTube チャンネルで他の動画も見る</p>
   </a>
 
   <div class="form-card reveal">
@@ -146,8 +147,8 @@
       <input type="hidden" name="_autoresponse" value="講演会のご依頼をいただきありがとうございます。具志アンデルソン飛雄馬です。内容を確認のうえ、3営業日以内にご返信いたします。&#10;&#10;※このメールは自動返信です。">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-      <div><label for="v-name">お名前</label><input id="v-name" name="お名前" type="text" placeholder="山田 太郎" required></div>
-      <div><label for="v-email">メールアドレス</label><input id="v-email" name="email" type="email" placeholder="example@mail.com" required></div>
+      <div><label for="v-name">お名前</label><input id="v-name" name="お名前" type="text" placeholder="山田 太郎" autocomplete="name" required></div>
+      <div><label for="v-email">メールアドレス</label><input id="v-email" name="email" type="email" placeholder="example@mail.com" autocomplete="email" required></div>
       <div><label for="v-date">ご希望の日程（3つ程）</label><input id="v-date" name="ご希望の日程" type="text" placeholder="2026/6/1, 2026/6/15, 2026/7/1"></div>
       <div><label for="v-time">ご希望の講演開始時刻＋講演時間</label><input id="v-time" name="ご希望の時間" type="text" placeholder="14:00開始 / 90分"></div>
       <div><label for="v-fee">ご希望の講演料</label><input id="v-fee" name="ご希望の講演料" type="text" placeholder="ご予算をご記入ください"></div>
@@ -159,7 +160,7 @@
 <aside class="pr-ad reveal" aria-label="広告">
   <a href="https://hisator-notebook.com/" class="pr-ad-card" target="_blank" rel="sponsored noopener">
     <span class="pr-ad-label">広告</span>
-    <img src="images/ad/hisatornotebook.webp" alt="HisatorNotebook のアイコン" class="pr-ad-icon" width="96" height="96" loading="lazy">
+    <img src="images/ad/hisatornotebook.webp" alt="HisatorNotebook のアイコン" class="pr-ad-icon" width="96" height="96" loading="lazy" decoding="async">
     <div class="pr-ad-body">
       <div class="pr-ad-name">HisatorNotebook</div>
       <div class="pr-ad-title">マップもノートも動画も、1 つのアプリで</div>
@@ -188,6 +189,6 @@
 </div>
 <div class="ft-copy">&copy; 具志アンデルソン飛雄馬 公式サイト ｜ Anderson Hyuma Gushi Official Web Site</div>
 </footer>
-<script src="shared.js"></script>
+<script src="shared.js?v=2026112501" defer></script>
 </body>
 </html>

@@ -8,11 +8,12 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://jinken-gushi.com/thanks.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2026110502">
-<link rel="icon" type="image/jpeg" href="images/gallery/7.jpg">
-<link rel="shortcut icon" type="image/jpeg" href="images/gallery/7.jpg">
-<link rel="apple-touch-icon" href="images/gallery/7.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2026112501">
+<noscript><style>#loader{display:none!important}.reveal,.hero-left,.hero-right{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 </head>
 <body>
 <div id="loader"><div class="loader-dot"><span></span><span></span><span></span></div></div>
@@ -34,7 +35,7 @@
     <a href="press.html">新聞記事</a>
     <a href="contact.html" class="nav-cta">お問い合わせ</a>
   </nav>
-  <div class="burger" id="burger" onclick="toggleMob()"><i></i><i></i><i></i></div>
+  <button type="button" class="burger" id="burger" onclick="toggleMob()" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobNav"><i></i><i></i><i></i></button>
 </div>
 </header>
 <div class="mob-overlay" id="mobOv" onclick="closeMob()"></div>
@@ -49,7 +50,7 @@
 </div>
 
 <main>
-<div style="max-width:720px;margin:0 auto;padding:120px 32px 80px;text-align:center" class="reveal">
+<div style="max-width:720px;margin:0 auto;padding:64px 32px 80px;text-align:center" class="reveal">
 
   <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#2d7a6f,#1f5e55);display:flex;align-items:center;justify-content:center;margin:0 auto 32px;box-shadow:0 8px 32px rgba(45,122,111,.3)">
     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -82,7 +83,7 @@
 <aside class="pr-ad reveal" aria-label="広告">
   <a href="https://hisator-notebook.com/" class="pr-ad-card" target="_blank" rel="sponsored noopener">
     <span class="pr-ad-label">広告</span>
-    <img src="images/ad/hisatornotebook.webp" alt="HisatorNotebook のアイコン" class="pr-ad-icon" width="96" height="96" loading="lazy">
+    <img src="images/ad/hisatornotebook.webp" alt="HisatorNotebook のアイコン" class="pr-ad-icon" width="96" height="96" loading="lazy" decoding="async">
     <div class="pr-ad-body">
       <div class="pr-ad-name">HisatorNotebook</div>
       <div class="pr-ad-title">マップもノートも動画も、1 つのアプリで</div>
@@ -112,6 +113,6 @@
 </div>
 <div class="ft-copy">&copy; 具志アンデルソン飛雄馬 公式サイト ｜ Anderson Hyuma Gushi Official Web Site</div>
 </footer>
-<script src="shared.js"></script>
+<script src="shared.js?v=2026112501" defer></script>
 </body>
 </html>
